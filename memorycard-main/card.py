@@ -29,9 +29,9 @@ RadioGroup.addButton(btn_ans4)
 line1 = QHBoxLayout()
 line2 = QVBoxLayout()
 line1.addWidget(btn_menu)
+line1.addStretch(2)
 line1.addWidget(btn_sleep)
 line1.addWidget(box_min)
-line1.addWidget(lb_ans)
 
 line_btn_ans1 = QVBoxLayout()
 line_btn_ans2 = QVBoxLayout()
@@ -49,7 +49,6 @@ AnswersGroupBox.setLayout(mainline_btn_ans)
 
 mani_line =QVBoxLayout()
 mani_line.addLayout(line1)
-mani_line.addWidget(lb_ans)
 
 
 ResGroupBox = QGroupBox('Результат')
@@ -59,6 +58,8 @@ line_res = QVBoxLayout()
 line_res.addWidget(lb_res)
 line_res.addWidget(lb_correct)
 ResGroupBox.setLayout(line_res)
+mani_line.addWidget(lb_ans, stretch= 1,alignment=Qt.AlignCenter)
+
 mani_line.addWidget(ResGroupBox,stretch=8)
 mani_line.addWidget(AnswersGroupBox,stretch=8)
 ResGroupBox.hide()
@@ -72,10 +73,13 @@ def show_ans():
     AnswersGroupBox.show()
     ResGroupBox.hide()
     btn_ans.setText('Відповісти')
+    RadioGroup.setExclusive(False)
     btn_ans1.setChecked(False)  
     btn_ans2.setChecked(False)      
     btn_ans3.setChecked(False)     
-    btn_ans4.setChecked(False)                      
+    btn_ans4.setChecked(False)   
+    RadioGroup.setExclusive(True)
+                   
 btn_ans.clicked.connect(show_res) 
 
 mani_line.addWidget(btn_ans)                                  

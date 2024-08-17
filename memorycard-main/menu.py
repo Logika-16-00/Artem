@@ -1,5 +1,5 @@
 
-from PyQt5.QtWidgets import QLineEdit, QPushButton,QFormLayout,QListView,QVBoxLayout,QWidget,QHBoxLayout
+from PyQt5.QtWidgets import QLineEdit, QPushButton,QFormLayout,QListWidget,QVBoxLayout,QWidget,QHBoxLayout
 
 line_ans = QLineEdit('')
 line_correct = QLineEdit('')
@@ -16,7 +16,7 @@ form.addRow('Введіть неправильний варіант1', line_fals
 form.addRow('Введіть неправильний варіант2', line_false2)
 
 form.addRow('Введіть неправильний варіант3', line_false3)
-line_q = QListView()
+line_q = QListWidget()
                                                                  
 btn_add = QPushButton('додати запитання')
 btn_clear = QPushButton('очистити')
@@ -26,7 +26,7 @@ wdgt_edit = QWidget()
 wdgt_edit.setLayout(form)
 
 line1 = QVBoxLayout()
-line1.addWidget(line_q)
+line1.addWidget(line_q,stretch= 3)
 line1.addWidget(btn_add)
 
 line2 = QVBoxLayout()
@@ -37,7 +37,7 @@ line3.addLayout(line1)
 line3.addLayout(line2)
 
 line4 = QVBoxLayout()
-line4.addWidget(btn_back,stretch=2)
+line3.addWidget(btn_back,stretch=2)
 main_menu_line = QHBoxLayout()
 main_menu_line.addLayout(line3)
 main_menu_line.addLayout(line4)
