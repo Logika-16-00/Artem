@@ -16,7 +16,7 @@ form.addRow('Введіть неправильний варіант1', line_fals
 form.addRow('Введіть неправильний варіант2', line_false2)
 
 form.addRow('Введіть неправильний варіант3', line_false3)
-line_q = QListWidget()
+list_q = QListWidget()
                                                                  
 btn_add = QPushButton('додати запитання')
 btn_clear = QPushButton('очистити')
@@ -26,7 +26,7 @@ wdgt_edit = QWidget()
 wdgt_edit.setLayout(form)
 
 line1 = QVBoxLayout()
-line1.addWidget(line_q,stretch= 3)
+line1.addWidget(list_q,stretch= 3)
 line1.addWidget(btn_add)
 
 line2 = QVBoxLayout()
