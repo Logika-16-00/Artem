@@ -17,6 +17,7 @@ class Widget(QMainWindow):
         self.ui.btn_add.clicked.connect(self.add_tag)
         self.ui.btn_delete.clicked.connect(self.delete_note)
         self.ui.btn_detach.clicked.connect(self.delete_tag)
+ 
         
 
 
@@ -35,7 +36,7 @@ class Widget(QMainWindow):
         self.write_to_file()
 
     def add_tag(self):
-        if self.ui.list_1.currentItem():
+        if self.ui.list_1.currentItem() :
             tag_name,ok =QInputDialog.getText(self, "Додати тег", "Введіть тег")
             if tag_name and ok:
                 note_name = self.ui.list_1.currentItem().text()
@@ -74,7 +75,10 @@ class Widget(QMainWindow):
     def write_to_file(self):
         with open("notes/notes.json","w", encoding="utf-8") as file:
             json.dump(notes, file,ensure_ascii=False) 
-        
+            # for note_name in notes.keys():
+            #     if search_tag in notes[note_name]["теги"]:
+            #             self.ui.list_1.addItem(note_name)
+            #     self.ui.list_2.clear()        
 with open("notes/notes.json","r", encoding ="utf-8") as file:
     notes = json.load(file)
 print(notes)
