@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_dir">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -37,7 +37,7 @@
      <string>Папка</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btn_left">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -50,7 +50,7 @@
      <string>ліво</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btn_right">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -63,7 +63,7 @@
      <string>вправо </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btn_flip">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -89,7 +89,7 @@
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="btn_sharp">
     <property name="geometry">
      <rect>
       <x>600</x>
