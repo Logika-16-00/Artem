@@ -6,12 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>952</width>
-    <height>600</height>
+    <width>1043</width>
+    <height>730</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(0, 0, 255);
+background-color: rgb(116, 118, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="listWidget">
@@ -20,8 +25,12 @@
       <x>0</x>
       <y>60</y>
       <width>121</width>
-      <height>501</height>
+      <height>581</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(183, 255, 194);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_dir">
@@ -33,6 +42,9 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);</string>
+    </property>
     <property name="text">
      <string>Папка</string>
     </property>
@@ -41,10 +53,13 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>480</y>
+      <y>580</y>
       <width>91</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(155, 255, 153);</string>
     </property>
     <property name="text">
      <string>ліво</string>
@@ -54,10 +69,13 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>480</y>
+      <y>580</y>
       <width>91</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(177, 255, 165);</string>
     </property>
     <property name="text">
      <string>вправо </string>
@@ -67,10 +85,13 @@
     <property name="geometry">
      <rect>
       <x>460</x>
-      <y>480</y>
+      <y>580</y>
       <width>101</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(160, 255, 166);</string>
     </property>
     <property name="text">
      <string>дзеркало</string>
@@ -81,9 +102,12 @@
      <rect>
       <x>180</x>
       <y>60</y>
-      <width>681</width>
-      <height>361</height>
+      <width>831</width>
+      <height>491</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -93,10 +117,13 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>480</y>
+      <y>580</y>
       <width>111</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(172, 255, 185);</string>
     </property>
     <property name="text">
      <string>різкість </string>
@@ -106,13 +133,32 @@
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>480</y>
+      <y>580</y>
       <width>111</width>
       <height>61</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(180, 255, 179);</string>
+    </property>
     <property name="text">
      <string>чб</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_save">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>580</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(172, 255, 172);</string>
+    </property>
+    <property name="text">
+     <string>зберегти</string>
     </property>
    </widget>
   </widget>
@@ -121,7 +167,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>952</width>
+     <width>1043</width>
      <height>18</height>
     </rect>
    </property>
