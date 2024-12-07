@@ -70,7 +70,7 @@ class Widget(QMainWindow):
         ext = ["png", "jpg", "jpeg", "bmp", "gif"]
         self.choose_dir()
         if self.workdir:
-            all_files = os.listdir(self.workdir)
+            all_files = os.listdir(self.workdir)#всі файли в папці перетворює список
             filter_files = self.filter(all_files, ext)
             self.ui.listWidget.clear()
             for file in filter_files:
