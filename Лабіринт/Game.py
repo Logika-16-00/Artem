@@ -67,7 +67,7 @@ class Wall(sprite.Sprite):
     def wall_draw(self):
         wn.blit(self.wall,(self.rect.x,self.rect.y))
         
-dx =3
+dx =1
 #створюємо стіни
 color = (32,54,122)
 wall1= Wall(color,0,0,800,10)
@@ -83,40 +83,46 @@ wall10=Wall(color,540,10,10,450)
 hero = Player("hero.png",100,140,100,100,3,3)
 enemy = Player("cyborg.png",530,480,100,100,3,1)
 finish = Player("treasure.png",550,70,80,50,0,0)
+over = 0
 while game:    
-    
-    #відображаємо фон
-    wn.blit(fon,(0,0))
-    for e in event.get():
-        if e.type == QUIT:
-            game = 0
-    hero.show()
-    hero.move()
-    enemy.show()
-    finish.show()
-    enemy.rect.x += dx 
-    if enemy.rect.x > 700 or enemy.rect.x < 100:
-        dx *= -1
+    if not over:
+        #відображаємо фон
+        wn.blit(fon,(0,0))
+        for e in event.get():
+            if e.type == QUIT:
+                game = 0
+        hero.show()
+        hero.move()
+        enemy.show()
+        finish.show()
+        enemy.rect.x += dx 
+        if enemy.rect.x > 700 or enemy.rect.x < 0:
+            dx *= -1
+            
+        wall1.wall_draw()
+        wall2.wall_draw()
+        wall3.wall_draw()
+        wall4.wall_draw()
+        wall5.wall_draw()
+        wall6.wall_draw()
+        wall7.wall_draw()
+        wall8.wall_draw()
+        wall9.wall_draw()
+        wall10.wall_draw()
+
+        walls = [wall1,  wall2, wall3, wall4, wall5, wall6, wall7, wall8, wall9, wall10]
+        for wall in walls:
+            if sprite.collide_rect(hero,wall):
+                hero.rect.x = 30
+                hero.rect.y = 40
+        if sprite.collide_rect(hero,enemy):
+            kick.play()
+            wn.blit(lose,(200,200))
+            
+        if sprite.collide_rect(hero,finish):
+            money.play()
+            wn.blit(win,(200,200))
         
-    wall1.wall_draw()
-    wall2.wall_draw()
-    wall3.wall_draw()
-    wall4.wall_draw()
-    wall5.wall_draw()
-    wall6.wall_draw()
-    wall7.wall_draw()
-    wall8.wall_draw()
-    wall9.wall_draw()
-    wall10.wall_draw()
-    if sprite.collide_rect(hero,enemy):
-        kick.play()
-        wn.blit(lose,(200,200))
-        # game = 0
-        
-    if sprite.collide_rect(hero,finish):
-        money.play()
-        wn.blit(win,(200,200))
-    
     
             
             
